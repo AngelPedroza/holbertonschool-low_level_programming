@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _isaplha - check the code for Holberton School students.
+ * _isalpha - The function of print the alphabet.
  *
  * @c: Is the variable of the function
  *
