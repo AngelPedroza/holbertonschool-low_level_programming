@@ -1,7 +1,9 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * _abs - Put the absolute valeu of a number.
+ *
+ * @i: Variable of the function.
  *
  * Return: Always 0.
  */
