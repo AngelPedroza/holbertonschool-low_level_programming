@@ -1,7 +1,7 @@
 #include "holberton.h"
 #include <stdio.h>
 /**
- * main - check the code for Holberton School students.
+ * times_table - Print a multiplicate table.
  *
  * Return: Always 0.
  */
