@@ -2,7 +2,9 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
+ * print_to_98 - check the code for Holberton School students.
+ *
+ * @n: The variable taht take the valio of the main and put in this program.
  *
  * Return: Always 0.
  */
