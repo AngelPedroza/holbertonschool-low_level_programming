@@ -24,8 +24,7 @@ void print_times_table(int n)
 					_putchar(' ');
 				}
 				_putchar('0' + m / 10);
-				_putchar('0' + m % 10);
-			}
+				_putchar('0' + m % 10);			}
 			else if (m <= 9)
 			{
 				if (b != 0)
@@ -35,21 +34,15 @@ void print_times_table(int n)
 					_putchar(' ');
 					_putchar(' ');
 				}
-				_putchar('0' + m);
-			}
+				_putchar('0' + m);			}
 			else
 			{
 				if (b != 0)
 				{
 					_putchar(',');
-					_putchar(' ');
-				}
+					_putchar(' ');				}
 			_putchar('0' + m / 100);
 			_putchar('0' + ((m % 100) / 10));
-			_putchar('0' + m % 10);
-			}
-		}
-		_putchar('\n');
-	}
-	}
+			_putchar('0' + m % 10);			}	}
+		_putchar('\n');	}	}
 }
