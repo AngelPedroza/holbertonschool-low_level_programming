@@ -11,13 +11,12 @@ int main(void)
 	b = 0;
 	c = 1;
 	d = 0;
-	for (a = 1; a < 50; a++)
+	for (a = 1; a <= 50; a++)
 	{
 		d = b + c;
-		printf(a == 49 ? "%lu\n" : "%lu, ", d);
+		printf(a == 50 ? "%lu\n" : "%lu, ", d);
 		b = c;
 		c = d;
 	}
-	putchar('\n');
 	return (0);
 }
