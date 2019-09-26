@@ -1,8 +1,8 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * print_diagonal - Prints a semi piramid jejeje a -1 its god.
+ * @n: The variable of the program
  * Return: Always 0.
  */
 void print_diagonal(int n)

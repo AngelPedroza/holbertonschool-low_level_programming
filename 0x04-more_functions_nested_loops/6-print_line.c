@@ -1,9 +1,9 @@
 #include "holberton.h"
 
 /**
- * void print_line(int n) - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_line - print a _, n times.
+ * @n: Variable of the program
+ * Return: Not have.
  */
 void print_line(int n)
 {
