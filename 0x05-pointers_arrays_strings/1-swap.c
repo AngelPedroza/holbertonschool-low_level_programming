@@ -1,4 +1,4 @@
-#include "holberton.c"
+#include "holberton.h"
 /**
  * swap_int - Change the value of two variables
  * @a: Variable
