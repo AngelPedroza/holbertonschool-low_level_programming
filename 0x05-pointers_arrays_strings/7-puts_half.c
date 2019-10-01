@@ -24,11 +24,11 @@ void puts_half(char *str)
 	}
 	else if ((a % 2) != 0)
 	{
-		div = (a - 1) / 2;
+		div = (a / 2) + 1;
 		while (div < a)
 		{
-			div++;
 			_putchar(str[div]);
+			div++;
 		}
 	}
 	_putchar('\n');
