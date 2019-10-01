@@ -3,8 +3,8 @@
 
 /**
  * *_strcpy - check the code for Holberton School students.
- * @dest:
- * @src:
+ * @dest: Its the new output
+ * @src: The variable that save my string
  * Return: Return.
  */
 char *_strcpy(char *dest, char *src)
@@ -15,6 +15,6 @@ char *_strcpy(char *dest, char *src)
 	{
 		a[dest] = a[src];
 	}
-	dest = src;
+	a[dest] = '\0';
 	return (dest);
 }
