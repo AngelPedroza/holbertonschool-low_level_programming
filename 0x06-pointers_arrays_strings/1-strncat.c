@@ -1,8 +1,9 @@
  #include "holberton.h"
 /**
- * _strcat - Copy a string in the final of other string
+ * _strncat - Copy a string in the final of other string
  * @dest: First string.
- * @src: Second string that print at the final to the first
+ * @src: Second string that print at the final to the first.
+ * @n: Size for use of source
  * Return: The first string.
  */
 char *_strncat(char *dest, char *src, int n)
@@ -27,15 +28,3 @@ char *_strncat(char *dest, char *src, int n)
 	dest[a + i] = '\0';
 	return (dest);
 }
-/* char*
- strncat(char *dest, const char *src, size_t n)
- {
-	 size_t dest_len = strlen(dest);
-	 size_t i;
-
-	 for (i = 0 ; i < n && src[i] != '\0' ; i++)
-		 dest[dest_len + i] = src[i];
-	 dest[dest_len + i] = '\0';
-
-	 return dest;
-	 }*/
