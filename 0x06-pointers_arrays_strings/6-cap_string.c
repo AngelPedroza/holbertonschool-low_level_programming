@@ -24,6 +24,13 @@ char *cap_string(char *s)
 					s[a + 1] = s[a + 1] - 32;
 				}
 			}
+			else if (a == 0)
+			{
+				if (s[a] >= 97 && s[a] <= 122)
+				{
+					s[a] = s[a] - 32;
+				}
+			}
 		}
 		a++;
 	}
