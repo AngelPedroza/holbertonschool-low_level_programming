@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * rot13 - check the code for Holberton School students.
- *
+ * rot13 - Replace under the code rot13.
+ * @a: The variable that will be changed.
  * Return: Return the change of the char.
  */
 char *rot13(char *a)
