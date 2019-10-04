@@ -1,8 +1,5 @@
 #include <stdio.h>
-/**
- * main - my main function
- * Return: A int variable.
- */
+
 int main(void)
 {
 	int n;
