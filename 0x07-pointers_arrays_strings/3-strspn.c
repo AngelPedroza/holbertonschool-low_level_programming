@@ -2,8 +2,10 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
+ * _strspn - print the lenght of the first string and if the first element not
+ * have macth return 0.
+ * @s: My first estring.
+ * @accept: My string for compare.
  * Return: Always 0.
  */
 unsigned int _strspn(char *s, char *accept)
