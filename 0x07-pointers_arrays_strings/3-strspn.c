@@ -8,6 +8,7 @@
  * @accept: My string for compare.
  * Return: Always 0.
  */
+
 unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int res;
