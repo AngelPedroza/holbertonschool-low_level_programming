@@ -1,6 +1,5 @@
 #include "holberton.h"
 #include <stdio.h>
-
 /**
  * _strspn - print the lenght of the first string and if the first element not
  * have macth return 0.
