@@ -9,19 +9,30 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int a;
+	int a, b, count, counth, match, verificador;
 
-	for (; *haystack; haystack++)
+	match = 0;
+	verificador = 0;
+	for (count = 0; needle[count] != '\0'; count++)
+	{}
+	for (counth = 0; haystack[counth] != '\0'; counth++)
+	{}
+	for (b = 0; b <= (counth - count); b++)
 	{
-		for (a = 0; needle[a]; a++)
+		for (a = 0; needle[a] != '\0'; a++)
 		{
-			if (*haystack == needle[0])
+			if (haystack[b + a] == needle[a])
 			{
-				return (haystack);
+				match = match + 1;
 			}
 		}
-		if (!needle[0])
-			break;
+		if (count == match)
+		{
+			verificador = 1;
+				break;
+		}
+		else
+			match = 0;
 	}
-	return (0);
+	return (verificador == 1 ? haystack + b : 0);
 }
