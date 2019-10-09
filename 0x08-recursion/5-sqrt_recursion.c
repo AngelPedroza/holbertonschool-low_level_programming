@@ -2,11 +2,12 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * _number - My function for make my conditional of a sqrt.
+ * @a: My number to find the sqrs
+ * @y: My cont.
+ * Return: Result of my operation.
  */
-int _number(int a , int y)
+int _number(int a, int y)
 {
 	if ((y * y) != a && (y * y) < a)
 	{
@@ -18,6 +19,11 @@ int _number(int a , int y)
 	}
 	return (-1);
 }
+/**
+ * _sqrt_recursion - Print my number for sqrt.
+ * @n: My nomber for search her sqrt
+ * Return: The number.
+ */
 int _sqrt_recursion(int n)
 {
 	int b;
