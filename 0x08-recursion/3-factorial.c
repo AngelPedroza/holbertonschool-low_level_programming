@@ -2,8 +2,8 @@
 #include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
+ * factorial - Print the result of the a factorial.
+ * @n: My factorial number.
  * Return: Always 0.
  */
 int factorial(int n)
@@ -12,7 +12,5 @@ int factorial(int n)
 		return (1);
 	if (n < 0)
 		return (-1);
-	else
-		n = n * factorial(n -1);
-	return (n);
+	return (n = n * factorial(n - 1));
 }
