@@ -27,10 +27,10 @@ int main(int argc, char **argv)
 					printf("Error\n");
 					return (1);
 				}
-				else if (argv[i][a] > 47 && argv[i][a] < 57)
-				{
-					res = res + atoi(argv[i]);
-				}
+			}
+			if (*argv[i] > 47 && *argv[i] < 57)
+			{
+				res = res + atoi(argv[i]);
 			}
 		}
 		printf("%d\n", res);
