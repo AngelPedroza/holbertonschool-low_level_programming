@@ -22,10 +22,7 @@ int main(int argc, char **argv)
 				return (1);
 			}
 		}
-		if (*argv[i] > 47 && *argv[i] < 57)
-		{
 			res = res + atoi(argv[i]);
-		}
 	}
 	printf("%d\n", res);
 	return (0);
