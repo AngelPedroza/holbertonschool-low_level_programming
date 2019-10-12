@@ -18,8 +18,7 @@ int main(int argc, char **argv)
 	}
 	else if (argc < 3)
 	{
-		printf("Error\n");
-		return (1);
+		printf("0\n");
 	}
 	else
 	{
