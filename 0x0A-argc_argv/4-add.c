@@ -12,11 +12,7 @@ int main(int argc, char **argv)
 	int i, res;
 
 	res = 0;
-	if (argc == 1)
-	{
-		printf("0\n");
-	}
-	else if (argc < 3)
+	if (argc < 3)
 	{
 		printf("0\n");
 	}
