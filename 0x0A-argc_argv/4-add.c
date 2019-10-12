@@ -20,7 +20,8 @@ int main(int argc, char **argv)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (*argv[i] > 48 && *argv[i] < 57)
+			if (argv[i][i + 1] > 47 && argv[i][i + 1] < 57
+&& *argv[i] > 47 && *argv[i] < 57)
 			{
 				res = res + atoi(argv[i]);
 			}
