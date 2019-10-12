@@ -1,7 +1,12 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+ * main - Sum my digit after the second array.
+ * @argc: Size of my Array of arrays
+ * @argv: Position in my main array.
+ * Return: Always is 0 if is succes.
+ */
 int main(int argc, char **argv)
 {
 	int i, res;
