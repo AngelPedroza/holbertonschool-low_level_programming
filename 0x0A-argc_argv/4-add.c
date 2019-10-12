@@ -12,28 +12,21 @@ int main(int argc, char **argv)
 	int i, a, res;
 
 	res = 0;
-	if (argc == 1)
+	for (i = 1; i < argc; i++)
 	{
-		printf("0\n");
-	}
-	else
-	{
-		for (i = 1; i < argc; i++)
+		for (a = 0; argv[i][a] != '\0'; a++)
 		{
-			for (a = 0; argv[i][a] != 0; a++)
+			if (argv[i][a] < 47 || argv[i][a] > 57)
 			{
-				if (argv[i][a] < 47 || argv[i][a] > 57)
-				{
-					printf("Error\n");
-					return (1);
-				}
-			}
-			if (*argv[i] > 47 && *argv[i] < 57)
-			{
-				res = res + atoi(argv[i]);
+				printf("Error\n");
+				return (1);
 			}
 		}
-		printf("%d\n", res);
+		if (*argv[i] > 47 && *argv[i] < 57)
+		{
+			res = res + atoi(argv[i]);
+		}
 	}
+	printf("%d\n", res);
 	return (0);
 }
