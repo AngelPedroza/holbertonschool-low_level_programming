@@ -9,7 +9,7 @@
  */
 int main(int argc, char **argv)
 {
-	int i, res;
+	int i, a, res;
 
 	res = 0;
 	if (argc == 1)
@@ -20,19 +20,17 @@ int main(int argc, char **argv)
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (argv[i][i + 1] > 47 && argv[i][i + 1] < 57
-&& *argv[i] > 47 && *argv[i] < 57)
+			for (a = 0; argv[i][a] != 0; a++)
 			{
-				res = res + atoi(argv[i]);
-			}
-			else if (argv[i][0] == 45 && argv[i][1] > 48 && argv[i][1] < 57)
-			{
-				res = res - (atoi(argv[i]) * -1);
-			}
-			else
-			{
-				printf("Error\n");
-				return (1);
+				if (argv[i][a] < 47 || argv[i][a] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
+				else if (argv[i][a] > 47 && argv[i][a] < 57)
+				{
+					res = res + atoi(argv[i]);
+				}
 			}
 		}
 		printf("%d\n", res);
