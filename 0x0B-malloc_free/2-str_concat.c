@@ -13,7 +13,6 @@ int _strlen(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{}
-	i--;
 	return (i);
 }
 /**
@@ -32,13 +31,14 @@ char *str_concat(char *s1, char *s2)
 
 	lens1 = _strlen(s1);
 	lens2 = _strlen(s2);
-	a = (char *)malloc((lens1 + lens2) * sizeof(char) + 1);
-
+	a = (char *)malloc(((lens1- 1) + (lens2 - 1)) * sizeof(char) + 1);
+	if (a == NULL)
+		return (0);
 	for (j = 0; j <= lens1; j++)
 	{
 		a[j] = s1[j];
 	}
-	for (i = lens1 + 1, e = 0; e <= lens2; i++, e++)
+	for (i = lens1, e = 0; e <= lens2; i++, e++)
 	{
 		a[i] = s2[e];
 	}
