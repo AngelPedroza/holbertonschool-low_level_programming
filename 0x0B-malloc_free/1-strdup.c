@@ -29,16 +29,17 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (0);
-
-	j = _strlen(str);
-	a = (char *)malloc(j * sizeof(char));
-	if (a == NULL)
-		return (0);
-
-	for (k = 0; str[k] != '\0'; k++)
+	else
 	{
-		a[k] = str[k];
+		j = _strlen(str);
+		a = (char *)malloc(jx * sizeof(char));
+		if (a == NULL)
+			return (0);
+		for (k = 0; str[k] != '\0'; k++)
+		{
+			a[k] = str[k];
+		}
+		return (a);
 	}
-	return (a);
 	free (a);
 }
