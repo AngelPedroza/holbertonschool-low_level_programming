@@ -13,7 +13,6 @@ int _strlen(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{}
-	i--;
 	return (i);
 }
 /**
@@ -28,7 +27,9 @@ char *_strdup(char *str)
 	int j, k;
 
 	if (str == NULL)
+	{
 		return (0);
+	}
 	else
 	{
 		j = _strlen(str);
@@ -41,5 +42,4 @@ char *_strdup(char *str)
 		}
 		return (a);
 	}
-	free (a);
 }
