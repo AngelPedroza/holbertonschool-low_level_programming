@@ -20,7 +20,7 @@ char *create_array(unsigned int size, char c)
 	}
 	a = (char *)malloc(size * sizeof(c));
 	for (i = 0; i <= size; i++)
-		a[i] = 'H';
+		a[i] = c;
 
 	return (a);
 }
