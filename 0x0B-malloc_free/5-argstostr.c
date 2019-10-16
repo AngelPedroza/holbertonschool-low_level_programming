@@ -26,7 +26,7 @@ char *argstostr(int ac, char **av)
 	char *a;
 	int i, sum, it1, it2;
 
-	if (ac == NULL || av == NULL)
+	if (ac == 0 || av == NULL)
 		return (NULL);
 	sum = 0;
 	for (i = 0; i < ac; i++)
