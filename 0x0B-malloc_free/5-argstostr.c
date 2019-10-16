@@ -35,7 +35,10 @@ char *argstostr(int ac, char **av)
 	}
 	a = malloc((sum + ac) * sizeof(char));
 	if (a == NULL)
+	{
+		free(a);
 		return (NULL);
+	}
 	sum = 0;
 	for (it1 = 0; it1 < ac; it1++)
 	{
