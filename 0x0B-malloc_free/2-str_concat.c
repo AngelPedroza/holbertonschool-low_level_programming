@@ -33,12 +33,12 @@ char *str_concat(char *s1, char *s2)
 
 	lens1 = _strlen(s1);
 	lens2 = _strlen(s2);
-	a = (char *)malloc(((lens1 - 1) + (lens2 - 1)) * sizeof(char) + 1);
+	a = malloc(((lens1) + (lens2) + 1) * sizeof(char));
 
 	if (a == NULL)
-		return (0);
+		return (NULL);
 
-	for (j = 0; j <= lens1; j++)
+	for (j = 0; j < lens1; j++)
 	{
 		a[j] = s1[j];
 	}
