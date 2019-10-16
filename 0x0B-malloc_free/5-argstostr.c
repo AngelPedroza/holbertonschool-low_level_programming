@@ -3,17 +3,24 @@
 #include <stdlib.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * _strlen - len of each elemento of my big array.
+ * @str: My string
+ * Return: My len.
  */
 int _strlen(char *str)
 {
 	int i;
+
 	for (i = 0; str[i] != '\0'; i++)
 		;
-    	return (i);
+	return (i);
 }
+/**
+ * argstostr - reply argc and argv function.
+ * @ac: My arguments.
+ * @av: My array of arrays.
+ * Return: My pointer for my string.
+ */
 char *argstostr(int ac, char **av)
 {
 	char *a;
