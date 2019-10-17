@@ -31,6 +31,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		s1 = "";
 		s2 = "";
+		a = malloc(3);
+		return (a);
 	}
 	lens1 = _strlen(s1);
 	lens2 = _strlen(s2);
