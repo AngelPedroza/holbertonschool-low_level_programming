@@ -45,6 +45,5 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		a[j] = s1[j];
 	for (i = lens1, e = 0; e <= n; i++, e++)
 		a[i] = s2[e];
-	a[i] = '\0';
 	return (a);
 }
