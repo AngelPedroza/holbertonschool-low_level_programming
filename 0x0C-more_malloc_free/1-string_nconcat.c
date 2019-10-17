@@ -12,7 +12,7 @@ int _strlen(char *str)
 	unsigned int i;
 
 	for (i = 0; str[i] != '\0'; i++)
-		;
+	{}
 	return (i);
 }
 /**
@@ -25,24 +25,25 @@ int _strlen(char *str)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	char *a;
-	unsigned int lens1, lens2, j, i, e;
+	unsigned int lens1, j, i;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
 	lens1 = _strlen(s1);
-	lens2 = _strlen(s2);
-
-	if (n >= lens2)
-		n = lens2;
 	a = malloc((lens1 + n + 1) * sizeof(char));
 	if (a == NULL)
 		return (NULL);
-	for (j = 0; j < lens1; j++)
-		a[j] = s1[j];
-	for (i = lens1, e = 0; e <= n; i++, e++)
-		a[i] = s2[e];
-	a[i] = '\0';
+	for (j = 0, i = 0; j < (lens1 + n); j++)
+		if (j < lens1)
+		{
+			a[j] = s1[j];
+		}
+		else
+		{
+			a[j] = s2[i++];
+		}
+	a[j] = '\0';
 	return (a);
 }
