@@ -23,11 +23,11 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 }
 
 /**
- * simple_print_buffer - prints buffer in hexa
- * @buffer: the address of memory to print
- * @size: the size of the memory to print
- *
- * Return: Nothing.
+ * _realloc - Return a new pointer with different size.
+ * @ptr: My old pointer
+ * @old_size: The size of ptr.
+ * @new_size: The size of my new pointer.
+ * Return: Return a new pointer.
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
@@ -36,8 +36,13 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (new_size == old_size)
 		return (ptr);
 	if (ptr == NULL)
-		old_size = new_size;
-
+	{
+		ptr = malloc(new_size);
+		if (ptr == NULL)
+			return (NULL);
+		else
+			return (ptr);
+	}
 	p = malloc(new_size);
 
 	if (p == NULL)
