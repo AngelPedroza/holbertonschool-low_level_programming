@@ -10,14 +10,12 @@ int main(int argc, char **argv)
 {
 	int convertbytes;
 
-	convertbytes = atoi(argv[0]);
-
 	if (argc != 2)
 	{
 		printf("Error\n");
 		exit(1);
 	}
-	if (convertbytes < 0)
+	if (argv[1] < 0)
 	{
 		printf("Error\n");
 		exit(2);
