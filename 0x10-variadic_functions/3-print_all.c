@@ -57,13 +57,13 @@ void print_all(const char * const format, ...)
 		{'c', printch},
 		{'i', printinteger},
 		{'f', printfloat},
-		{'s', printstring}
+		{'s', printstring}}
 	};
 
-	it1 = 0;
 	va_start(listed, format);
 
-	while (format[it1] != '\0')
+	it1 = 0;
+	while (format[it1] != '\0' && format)
 	{
 		i = 0;
 		while (i < 4)
