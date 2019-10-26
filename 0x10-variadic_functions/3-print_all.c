@@ -57,9 +57,8 @@ void print_all(const char * const format, ...)
 		{'c', printch},
 		{'i', printinteger},
 		{'f', printfloat},
-		{'s', printstring}}
+		{'s', printstring}
 	};
-
 	va_start(listed, format);
 
 	it1 = 0;
