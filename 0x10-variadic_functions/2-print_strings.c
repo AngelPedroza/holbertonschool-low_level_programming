@@ -1,9 +1,10 @@
 #include "variadic_functions.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * print_strings - print a string jejej.
+ * @separator: My separator of my strings
+ * @n: Size of the parameters
+ * Return: Nothing.
  */
 void print_strings(const char *separator, const unsigned int n, ...)
 {
@@ -15,7 +16,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	{
 		char *val = va_arg(my_list, char*);
 
-		if ( val == NULL)
+		if (val == NULL)
 			printf("(nil)");
 
 		if (separator == NULL)

@@ -3,8 +3,8 @@
 #include "variadic_functions.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * sum_them_all - sum all the paramenters
+ * @n: Size of my parameters.
  * Return: Always 0.
  */
 int sum_them_all(const unsigned int n, ...)
