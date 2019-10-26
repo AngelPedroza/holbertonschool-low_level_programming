@@ -14,10 +14,9 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	va_start(my_list, n);
 	for (i = 0; i < n; i++)
 	{
-		if (separator == NULL)
 			printf("%d", va_arg(my_list, int));
-		else if (i < n - 1 && separator != NULL)
-			printf("%d%s", va_arg(my_list, int), separator);
+		if (i < n - 1 && separator != NULL)
+			printf("%s", separator);
 	}
 	printf("\n");
 	va_end(my_list);
