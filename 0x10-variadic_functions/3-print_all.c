@@ -54,20 +54,21 @@ void print_all(const char * const format, ...)
 	int it1, i;
 	char *separador = "";
 	op_t ops[] = {
-		{'c', printch},
-		{'i', printinteger},
-		{'f', printfloat},
-		{'s', printstring}
+		{"c", printch},
+		{"i", printinteger},
+		{"f", printfloat},
+		{"s", printstring},
+		{NULL, NULL}
 	};
 	va_start(listed, format);
 
 	it1 = 0;
-	while (format[it1] != '\0' && format)
+	while (format && format[it1])
 	{
 		i = 0;
-		while (i < 4)
+		while (ops[i].c)
 		{
-			if (format[it1] == ops[i].c)
+			if (format[it1] == *(ops[i].c))
 			{
 				printf("%s", separador);
 				ops[i].f(listed);
