@@ -1,80 +1,59 @@
-# 0x01. C - Variables, if, else, while
+# 0x00. C - Hello, World
 
 ## Description
 What you should learn from this project:
 
-* What are the arithmetic operators and how to use them
-* What are the logical operators (sometimes called boolean operators) and how to use them
-* What the the relational operators and how to use them
-* What values are considered TRUE and FALSE in C
-* What are the boolean operators and how to use them
-* How to use the if, if ... else statements
-* How to use comments
-* How to declare variables of types char, int, unsigned int
-* How to assign values to variables
-* How to print the values of variables of type char, int, unsigned int with printf
-* How to use the while loop
-* How to use variables with the while loop
-* How to print variables using printf
-* What is the ASCII character set
-* What are the purpose of the gcc flags -m32 and -m64
+* Why C programming is awesome (don’t forget to tweet today, with the hashtag #cisfun :))
+* Who invented C
+* Who are Dennis Ritchie, Brian Kernighan and Linus Torvalds
+* What happens when you type gcc main.c
+* What is an entry point
+* What is main
+* How to print text using printf, puts and putchar
+* How to get the size of a specific type using the unary operator sizeof
+* How to compile using gcc
+* What is the default program name when compiling with gcc
+* What is the official Holberton C coding style and how to check your code with betty-style
+* How to find the right header to include in your source code when using a standard library function
+* How does the main function influence the return value of the program
 
 ---
 
-### [0. Positive anything is better than negative nothing](./0-positive_or_negative.c)
-* This program will assign a random number to the variable n each time it is executed. Complete the source code in order to print whether the number stored in the variable n is positive or negative.
+### [0. Preprocessor](./0-preprocessor)
+* Write a script that runs a C file through the preprocessor and save the result into another file.
 
 
-### [1. The last digit](./1-last_digit.c)
-* This program will assign a random number to the variable n each time it is executed. Complete the source code in order to print the last digit of the number stored in the variable n.
+### [1. Compiler](./1-compiler)
+* Write a script that compiles a C file but does not link.
 
 
-### [2. I sometimes suffer from insomnia. And when I can't fall asleep, I play what I call the alphabet game](./2-print_alphabet.c)
-* Write a program that prints the alphabet in lowercase, followed by a new line.
+### [2. Assembler](./2-assembler)
+* Write a script that generates the assembly code of a C code and save it in an output file.
 
 
-### [3. alphABET](./3-print_alphabets.c)
-* Write a program that prints the alphabet in lowercase, and then in uppercase, followed by a new line.
+### [3. Name](./3-name)
+* Write a script that compiles a C file and creates an executable named cisfun.
 
 
-### [4. When I was having that alphabet soup, I never thought that it would pay off](./4-print_alphabt.c)
-* Write a program that prints the alphabet in lowercase, followed by a new line.
+### [4. Hello, puts](./4-puts.c)
+* Write a C program that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
 
 
-### [5. Numbers](./5-print_numbers.c)
-* Write a program that prints all single digit numbers of base 10 starting from 0, followed by a new line.
+### [5. Hello, printf](./5-printf.c)
+* Write a C program that prints exactly with proper grammar, but the outcome is a piece of art,, followed by a new line.
 
 
-### [6. Numberz](./6-print_numberz.c)
-* Write a program that prints all single digit numbers of base 10 starting from 0, followed by a new line.
+### [6. Size is not grandeur, and territory does not make a nation](./6-size.c)
+* Write a C program that prints the size of various types on the computer it is compiled and run on.
 
 
-### [7. Smile in the mirror](./7-print_tebahpla.c)
-* Write a program that prints the lowercase alphabet in reverse, followed by a new line.
+### [7. What happens when you type gcc main.c](./100-intel)
+* Write a blog post that explains all the steps of compilation. Use command lines and examples to illustrate.
 
 
-### [8. Hexadecimal](./8-print_base16.c)
-* Write a program that prints all the numbers of base 16 in lowercase, followed by a new line.
+### [8. Intel](./101-quote.c)
+* Write a script that generates the assembly code (Intel syntax) of a C code and save it in an output file.
 
-
-### [9. Patience, persistence and perspiration make an unbeatable combination for success](./9-print_comb.c)
-* Write a program that prints all possible combinations of single-digit numbers.
-
-
-### [10. 00...99](./10-print_comb2.c)
-* Write a program that prints the numbers from 00 to 99.
-
-
-### [11. Inventing is a combination of brains and materials. The more brains you use, the less material you need](./100-print_comb3.c)
-* Write a program that prints all possible different combinations of two digits.
-
-
-### [12. The success combination in business is: Do what you do better... and: do more of what you do...](./101-print_comb4.c)
-* Write a program that prints all possible different combinations of three digits.
-
-
-### [13. Software is eating the World](./102-print_comb5.c)
-* Write a program that prints all possible combinations of two two-digit numbers.
 
 ---
 
