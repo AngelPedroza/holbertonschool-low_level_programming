@@ -10,7 +10,7 @@
  */
 typedef struct select
 {
-	char c;
+	char *c;
 	void (*f)(va_list listed);
 } op_t;
 int sum_them_all(const unsigned int n, ...);
