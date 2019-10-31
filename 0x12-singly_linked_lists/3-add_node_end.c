@@ -1,16 +1,23 @@
 #include "lists.h"
+/**
+ * _strlen - Give the length of a string.
+ * @str: My string
+ * Return: Return the length of the string.
+ */
 
 int _strlen(const char *str)
 {
 	int i;
+
 	for (i = 0; str[i] != 0; i++)
 		;
 	return (i);
 }
 /**
- * add_node_end -
- *
- * Return: 
+ * add_node_end - put a new node next of the actual last node.
+ * @head: My address of the nodes.
+ * @str: The string for the new node.
+ * Return: The new node.
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
