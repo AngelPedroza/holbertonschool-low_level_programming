@@ -1,8 +1,8 @@
 #include "lists.h"
 
 /**
- * print_listint - print a list (nodes) of integers
- * @h: Address of each node
+ * print_listint_safe - print a list (nodes) of integers.
+ * @head: Address of each node
  * Return: How many nodes I have.
  */
 size_t print_listint_safe(const listint_t *head)
