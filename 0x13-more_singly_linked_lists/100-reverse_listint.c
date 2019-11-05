@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * reverse_listint - chage the order of a linked list.
+ * @head: My pointer to each node.
+ * Return: My new list in reverse.
  */
 
 listint_t *reverse_listint(listint_t **head)
