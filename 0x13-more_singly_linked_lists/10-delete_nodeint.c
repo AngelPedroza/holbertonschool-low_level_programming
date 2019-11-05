@@ -32,9 +32,17 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 			else
 			{
 				while (index-- != 0)
+				{
 					tmp = tmp->next;
+					if (tmp == NULL)
+						return (-1);
+				}
 				while (index2-- != 1)
+				{
 					tmp2 = tmp2->next;
+					if (tmp == NULL)
+						return (-1);
+				}
 				tmp2->next = tmp->next;
 				free(tmp);
 			}
