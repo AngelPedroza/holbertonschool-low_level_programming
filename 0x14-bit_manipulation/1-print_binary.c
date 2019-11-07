@@ -2,8 +2,9 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
+ * print_rev - print each bit in recursively.
+ * @n: My number to convert.
+ * @checker: if my number is > than 0.
  * Return: Always 0.
  */
 void print_rev(unsigned long int n, int checker)
@@ -24,8 +25,8 @@ void print_rev(unsigned long int n, int checker)
 		_putchar('1');
 }
 /**
- * main - check the code for Holberton School students.
- *
+ * print_binary - printme a binary od enteger..
+ * @n: My number to convert.
  * Return: Always 0.
  */
 void print_binary(unsigned long int n)
