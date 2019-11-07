@@ -2,9 +2,10 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * set_bit - Put 1 (a bit) in the position of index.
+ * @n: My number.
+ * @index: My bit for change.
+ * Return: 1 if is succes of -1 if it fail.
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
