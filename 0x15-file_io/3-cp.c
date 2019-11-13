@@ -1,66 +1,50 @@
 #include "holberton.h"
 
 /**
- * _strlen - Give me the len of a string..
- * @str: My string.
- * Return: The len.
- */
-int _strlen(char *str)
-{
-	int i;
-
-	for (i = 0; str[i] != '\0'; i++)
-		;
-	return (i);
-}
-/**
- * append_text_to_file - Write after to the first write in a file.
- * @filename: Name of the file.
- * @text_content: The content of the file.
- * Return: 1 if is succes or -1 if it fail..
+ * main - Copy the content of a file in another file.
+ * @argc: How many arguments.
+ * @argv: Pointer to the arguments (all are strings).
+ * Return: return 0 if is succes.
  */
 int main(int argc, char *argv[])
 {
-	if (argc == 3)
+	int fgto, fgfrom, check_close_from, check_close_to;
+	char *buffer;
+	ssize_t checker_write, checker_read;
+
+	if (argc != 3)
+		dprintf(STDERR_FILENO, "Usage: cp %s %s\n", argv[1], argv[2]), exit(97);
+	buffer = malloc(1024);
+	fgfrom = open(argv[1], O_RDONLY);
+	if (fgfrom == -1)
 	{
-		int fg, len;
-		char *buffer;
-		ssize_t i, w;
-
-		buffer = malloc(1024);
-		if (!*argv[1])
-			return (-1);
-		fg = open(argv[1], O_RDONLY);
-		if (fg == -1)
-			return (-1);
-		if (!*argv[2])
-			return (close(fg) == -1 ? -1 : 1);
-
-		/*read from*/
-		i = read(fg, (char *)buffer, 1024);
-		if (i == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file ");
-			dprintf(STDERR_FILENO, "%s\n", argv[1]);
-			exit(98);
-		}
-		close(fg);
-
-		/*write to*/
-		fg = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-		if (fg == -1)
-			return (-1);
-		len = _strlen(buffer);
-		buffer[len] = '\n';
-		w = write(fg, buffer, len);
-		if (w == -1)
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+	fgto = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	if (fgto == -1)
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
+	checker_read = read(fgfrom, (char *)buffer, 1024);
+	if (checker_read > 0)
+	{
+		checker_write = write(fgto, buffer, checker_read);
+		if (checker_write != checker_read)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
 		}
-		free(buffer);
-		return (1);
 	}
-	dprintf(STDERR_FILENO, "Usage: cp %s %s\n", argv[1], argv[2]);
-	exit(97);
+	if (checker_read == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+	check_close_from = close(fgfrom);
+	if (check_close_from == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fgfrom), exit(100);
+	check_close_to = close(fgto);
+	if (check_close_to == -1)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fgto), exit(100);
+	free(buffer);
+	return (0);
 }
