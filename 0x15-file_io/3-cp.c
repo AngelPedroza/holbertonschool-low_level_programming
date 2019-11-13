@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
 	ssize_t checker_write, checker_read;
 
 	if (argc != 3)
-		dprintf(STDERR_FILENO, "Usage: cp %s %s\n", argv[1], argv[2]), exit(97);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	buffer = malloc(1024);
 	fgfrom = open(argv[1], O_RDONLY);
 	if (fgfrom == -1)
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	if (fgto == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	checker_read = read(fgfrom, (char *)buffer, 1024);
-	if (checker_read > 0)
+	while (checker_read > 0)
 	{
 		checker_write = write(fgto, buffer, checker_read);
 		if (checker_write != checker_read)
