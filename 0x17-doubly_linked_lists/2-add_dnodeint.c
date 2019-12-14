@@ -1,9 +1,10 @@
 #include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always EXIT_SUCCESS.
+ * add_dnodeint - Add a new node in the begin of the list.
+ * @head: My head of the list.
+ * @n: The data of each new node.
+ * Return: The new node if succes or null if not.
  */
 dlistint_t *add_dnodeint(dlistint_t **head, const int n)
 {
