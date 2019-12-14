@@ -1,9 +1,11 @@
 #include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always EXIT_SUCCESS.
+ * insert_dnodeint_at_index - Inset a new node at index position with n value.
+ * @h: My list.
+ * @idx: Position to insert the new node.
+ * @n: The value of the new node.
+ * Return: The new node if succes or null if it fails.
  */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {

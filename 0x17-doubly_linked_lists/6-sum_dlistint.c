@@ -1,9 +1,9 @@
 #include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always EXIT_SUCCESS.
+ * sum_dlistint - sum all data of each node.
+ * @head: My list
+ * Return: The sum of all nodes or 0 if not have nodes.
  */
 int sum_dlistint(dlistint_t *head)
 {
