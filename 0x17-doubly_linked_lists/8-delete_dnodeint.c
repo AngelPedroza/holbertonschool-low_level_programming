@@ -1,9 +1,10 @@
 #include "lists.h"
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always EXIT_SUCCESS.
+ * delete_dnodeint_at_index - Delete a node.
+ * @head: My list.
+ * @index: Position for deleta a node.
+ * Return: 1 if succes or -1 if it fails.
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
