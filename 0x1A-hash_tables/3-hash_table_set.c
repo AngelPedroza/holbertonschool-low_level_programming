@@ -49,8 +49,9 @@ void hash_handler(hash_table_t *ht, hash_node_t *node)
 		{
 			if (strcmp(tmp->key, node->key) == 0)
 			{
-				tmp->value = strdup(node->value);
-				free_nodes(node);
+				tmp = ht->array[1];
+				ht->array[0] = node;
+				node->next = tmp;
 				return;
 			}
 
@@ -68,16 +69,4 @@ void hash_handler(hash_table_t *ht, hash_node_t *node)
 		ht->array[idx] = node;
 		node->next = NULL;
 	}
-}
-
-/**
- * free_nodes - free the elements of a specific node
- * @node: The node for free
- * Return: Nothing
- */
-void free_nodes(hash_node_t *node)
-{
-	free(node->value);
-	free(node->key);
-	free(node);
 }

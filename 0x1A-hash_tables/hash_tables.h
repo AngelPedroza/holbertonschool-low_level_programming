@@ -40,6 +40,5 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size);
 /* Set a value function */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 void hash_handler(hash_table_t *ht, hash_node_t *node);
-void free_nodes(hash_node_t *node);
 
 #endif
