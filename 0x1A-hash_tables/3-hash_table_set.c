@@ -21,7 +21,12 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	node->key = strdup(key);
+	if (!node->key)
+		return (0);
+
 	node->value = strdup(value);
+	if (!node->value)
+		return (0);
 
 	hash_handler(ht, node);
 
@@ -49,7 +54,11 @@ void hash_handler(hash_table_t *ht, hash_node_t *node)
 		{
 			if (strcmp(tmp->key, node->key) == 0)
 			{
-				tmp->value = node->value;
+				free(tmp->value);
+				tmp->value = strdup(node->value);
+				free(node->value);
+				free(node->key);
+				free(node);
 				return;
 			}
 
