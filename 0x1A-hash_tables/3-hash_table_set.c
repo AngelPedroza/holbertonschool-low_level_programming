@@ -49,9 +49,7 @@ void hash_handler(hash_table_t *ht, hash_node_t *node)
 		{
 			if (strcmp(tmp->key, node->key) == 0)
 			{
-				tmp = ht->array[1];
-				ht->array[0] = node;
-				node->next = tmp;
+				tmp->value = node->value;
 				return;
 			}
 
@@ -59,9 +57,8 @@ void hash_handler(hash_table_t *ht, hash_node_t *node)
 		}
 		if (tmp == NULL)
 		{
-			tmp->next = ht->array[idx];
+			node->next = ht->array[idx];
 			ht->array[idx] = node;
-			node->next = NULL;
 		}
 	}
 	else
