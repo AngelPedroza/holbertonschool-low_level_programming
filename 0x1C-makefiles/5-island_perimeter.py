@@ -15,7 +15,7 @@ def island_perimeter(grid):
                 if i + 1 < len(grid[j]) and grid[j][i + 1] is 1:
                     # Right
                     per -= 1
-                if j + 1 < len(grid) and  grid[j + 1][i] is 1:
+                if j + 1 < len(grid) and grid[j + 1][i] is 1:
                     # Down
                     per -= 1
     return per
