@@ -1,6 +1,6 @@
 CC = gcc
 SRC = main.c holberton.c
-OBJ = $(patsubst %.c. %.o, $(SRC))
+OBJ = $(patsubst %.c,%.o, $(SRC))
 NAME = holberton
 
 all: $(OBJ)
