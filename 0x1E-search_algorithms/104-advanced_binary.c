@@ -9,15 +9,15 @@
  */
 void print_array(int *array, int left, int right)
 {
-    int i;
+	int i;
 
-    for (i = left; i < right; i++)
-	printf("%d, ", array[i]);
-    printf("%d\n", array[i]);
+	for (i = left; i < right; i++)
+		printf("%d, ", array[i]);
+	printf("%d\n", array[i]);
 }
 
 /**
- * binary_search - seacrh dividin the array in two
+ * advanced_binary - seacrh dividin the array in two
  * @array: the sort array to search
  * @size: size of the array
  * @value: value to find into the array
@@ -25,23 +25,23 @@ void print_array(int *array, int left, int right)
  */
 int advanced_binary(int *array, size_t size, int value)
 {
-    int left = 0;
-    int right = (int)size - 1;
-    int i = 0;
+	int left = 0;
+	int right = (int)size - 1;
+	int i = 0;
 
-    while (left < right)
-    {
-	printf("Searching in array: ");
-	print_array(array, left, right);
-	i = (left + right) / 2;
-	if (array[i] < value)
-	    left = i + 1;
-	else
-	    right = i;
-    }
+	while (left < right)
+	{
+		printf("Searching in array: ");
+		print_array(array, left, right);
+		i = (left + right) / 2;
+		if (array[i] < value)
+			left = i + 1;
+		else
+			right = i;
+	}
 
-    if (array[i] == value)
-	    return (i);
-    
-    return (-1);
+	if (array[i] == value)
+		return (i);
+
+	return (-1);
 }
