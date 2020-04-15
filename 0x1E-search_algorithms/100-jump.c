@@ -1,9 +1,11 @@
 #include "search_algos.h"
 
 /**
- *
- *
- *
+ * jump_search - search into segments
+ * @array: My array
+ * @size: Size of the array
+ * @value: Value to search
+ * Return: The index of value otherwise -1
  */
 int jump_search(int *array, size_t size, int value)
 {

@@ -2,9 +2,9 @@
 
 /**
  * print_array - print my array
- * @array - The sort array to search
- * @left - min number
- * @right - max number
+ * @array: The sort array to search
+ * @left: min number
+ * @right: max number
  * Return: Nothing
  */
 void print_array(int *array, int left, int right)
@@ -15,11 +15,12 @@ void print_array(int *array, int left, int right)
 	printf("%d, ", array[i]);
     printf("%d\n", array[i]);
 }
+
 /**
  * binary_search - seacrh dividin the array in two
- * @array - the sort array to search
- * @size - size of the array
- * @value - value to find into the array
+ * @array: the sort array to search
+ * @size: size of the array
+ * @value: value to find into the array
  * Return: The index of the value or -1 if it fails
  */
 int binary_search(int *array, size_t size, int value)

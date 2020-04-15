@@ -2,9 +2,9 @@
 
 /**
  * print_array - print my array
- * @array - The sort array to search
- * @left - min number
- * @right - max number
+ * @array: The sort array to search
+ * @left: min number
+ * @right: max number
  * Return: Nothing
  */
 void print_array(int *array, int left, int right)
@@ -16,10 +16,11 @@ void print_array(int *array, int left, int right)
     printf("%d\n", array[i]);
 }
 /**
- * binary_search - seacrh dividin the array in two
- * @array - the sort array to search
- * @size - size of the array
- * @value - value to find into the array
+ * binary_search_new - seacrh dividin the array in two
+ * @array: the sort array to search
+ * @left: min of the array
+ * @right: max of the array
+ * @value: value to find into the array
  * Return: The index of the value or -1 if it fails
  */
 int binary_search_new(int *array, int left, int right, int value)
@@ -42,11 +43,11 @@ int binary_search_new(int *array, int left, int right, int value)
 }
 
 /**
- * exponential_search -
- * @array
- * @size
- * @value
- * Return:
+ * exponential_search - search by half
+ * @array: The sort array
+ * @size: Size of the array
+ * @value: Value to search into the array
+ * Return: The index of the value or -1 if it fails
  */
 int exponential_search(int *array, size_t size, int value)
 {
@@ -69,5 +70,5 @@ int exponential_search(int *array, size_t size, int value)
 
     printf("Value found between indexes [%d] and [%d]\n", bound / 2, max);
 
-    return binary_search_new(array, bound / 2, max, value);
+    return (binary_search_new(array, bound / 2, max, value));
 }
