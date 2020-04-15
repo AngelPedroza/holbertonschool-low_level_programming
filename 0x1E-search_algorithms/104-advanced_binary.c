@@ -1,19 +1,55 @@
 #include "search_algos.h"
 
 /**
- * print_array - print my array
+ * print_array_new - print my array
  * @array: The sort array to search
  * @left: min number
  * @right: max number
  * Return: Nothing
  */
-void print_array(int *array, int left, int right)
+void print_array_new(int *array, int left, int right)
 {
 	int i;
 
 	for (i = left; i < right; i++)
 		printf("%d, ", array[i]);
 	printf("%d\n", array[i]);
+}
+
+/**
+ * recursive_search - binary recursive
+ * @array: The sort array to search
+ * @low: min number
+ * @high: max number
+ * @value: Target
+ * Return: Nothing
+ */
+int recursive_search(int *array, int low, int high, int value)
+{
+	int mid = 0;
+
+	if (low > high)
+		return (-1);
+
+	printf("Searching in array: ");
+	print_array_new(array, low, high);
+
+
+	if (value == array[high] && low == high)
+		return (high);
+
+	if (low == high && value != array[high])
+		return (-1);
+
+	mid = low + (high - low) / 2;
+
+	if ((mid == low || value != array[mid - 1]) && array[mid] == value)
+		return (mid);
+
+	if (value <= array[mid])
+		return (recursive_search(array, low, mid, value));
+
+	return (recursive_search(array, mid + 1, high, value));
 }
 
 /**
@@ -25,23 +61,9 @@ void print_array(int *array, int left, int right)
  */
 int advanced_binary(int *array, size_t size, int value)
 {
-	int left = 0;
-	int right = (int)size - 1;
-	int i = 0;
+	int low = 0;
+	int high = size - 1;
+	int index = recursive_search(array, low, high, value);
 
-	while (left < right)
-	{
-		printf("Searching in array: ");
-		print_array(array, left, right);
-		i = (left + right) / 2;
-		if (array[i] < value)
-			left = i + 1;
-		else
-			right = i;
-	}
-
-	if (array[i] == value)
-		return (i);
-
-	return (-1);
+	return (index);
 }
